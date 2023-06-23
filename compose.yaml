@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  warikan-server:
+    build: .
+    container_name: warikan-server
+    working_dir: /go/src/warikan-server
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/go/src/warikan-server
+    ports:
+      - 8080:8080
